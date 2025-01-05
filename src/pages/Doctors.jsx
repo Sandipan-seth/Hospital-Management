@@ -27,7 +27,7 @@ const Doctors = () => {
   return (
     <div className="flex flex-col">
       <p className="text-center text-2xl">Browse through the doctors specialist</p>
-      <div className="flex gap-14 ">
+      <div className="flex gap-14 flex-col sm:flex-row">
         <div>
           {specialityData.map((item, index) => {
             return <p key={index}
@@ -40,7 +40,7 @@ const Doctors = () => {
               }
               setToggle(!toggle)
             }}
-            className={`border border-blue-400 cursor-pointer m-3 p-3 rounded-lg  text-sm hover:bg-blue-200 text-black transition-all duration-300 ${toggle && item.speciality === speciality ? 'bg-blue-200':''}`}
+            className={`border border-blue-400 cursor-pointer m-3 p-3 rounded-lg  text-sm hover:bg-blue-200 text-black transition-all duration-300 ${item.speciality === speciality ? 'bg-blue-200':''}`}
             >{item.speciality}</p>;
           })}
         </div>

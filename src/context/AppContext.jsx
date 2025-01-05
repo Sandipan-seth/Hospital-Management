@@ -7,13 +7,15 @@ const AppContext = createContext();
 export const AppContextProvider =(props)=>{
     const [token, setToken] = useState(true);
     const [toggle, setToggle] = useState(false);
+    const currencySymbol = "₹";
     
     const value ={
         doctors,
         token,
         setToken,
         toggle,
-        setToggle
+        setToggle,
+        currencySymbol
     }
 
     return(
